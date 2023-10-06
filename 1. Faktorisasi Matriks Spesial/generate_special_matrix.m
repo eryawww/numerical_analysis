@@ -1,3 +1,4 @@
+# Mengenerate special matrix dengan ukuran nxn
 function A = generate_special_matrix (n)
 
 A = zeros(n, n);

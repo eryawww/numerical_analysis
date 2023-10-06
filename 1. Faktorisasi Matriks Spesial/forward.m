@@ -1,3 +1,5 @@
+# Menyelesaikan persoalan Lx=b
+
 function x = forward (A, b)
 
 n = length(A);

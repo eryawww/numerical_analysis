@@ -1,6 +1,3 @@
-## Author: Eryawan <Eryawan@DESKTOP-B68N805>
-## Created: 2023-10-06
-
 function x = solve (A, b)
 
 [n, n] = size(A);
@@ -16,9 +13,9 @@ for i=1:n/2
 endfor
 
 # faktorisasi LU
-factA = LU(Ahat);
+factA = LU_special(Ahat);
 
 # solve faktorisasi LU
-x = solve_represented(factA, b);
+x = solve_special(factA, b);
 
 endfunction

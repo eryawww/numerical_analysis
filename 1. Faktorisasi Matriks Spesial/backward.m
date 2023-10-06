@@ -1,3 +1,5 @@
+# Menyelesaikan persoalan Ux=b
+
 function x = backward (A, b)
 
 n = length(A);

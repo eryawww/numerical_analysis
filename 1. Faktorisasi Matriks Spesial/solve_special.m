@@ -1,7 +1,6 @@
-## Author: Eryawan <Eryawan@DESKTOP-B68N805>
-## Created: 2023-10-06
+# Menyelesaikan Ax=b dengan A adalah LU dari matriks representasi efisien
 
-function x = solve_represented (A, b)
+function x = solve_special (A, b)
 
 [n, m] = size(A);
 
