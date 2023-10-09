@@ -1,6 +1,6 @@
 # Menyelesaikan Ax=b dengan A adalah LU dari matriks representasi efisien
 
-function x = solve_special (A, b)
+function x = solve_special (A, b, s)
 
 [n, m] = size(A);
 
@@ -12,6 +12,11 @@ for i=1:m/2
   index_start = (i-1)*2+1;
   b(index_start) = b_copy(i);
   b(index_start+1) = b_copy(m-i+1);
+  if (s(i) == 1)
+    temp = b(index_start);
+    b(index_start) = b(index_start+1);
+    b(index_start+1) = temp;
+  endif
 endfor
 
 # solve for each submatrix
@@ -40,6 +45,11 @@ for i=1:m/2
   index_start = (i-1)*2+1;
   x(i) = x_copy(index_start);
   x(m-i+1) = x_copy(index_start+1);
+  if (s(i) == 1)
+    temp = x(i);
+    x(i) = x(m-i+1);
+    x(m-i+1) = temp;
+  endif
 endfor
 
 endfunction
